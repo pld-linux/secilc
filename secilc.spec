@@ -2,11 +2,15 @@
 # Conditional build:
 %bcond_without	doc	# HTML documentation
 #
+%ifnarch %{ix86} %{x8664}
+# pandoc requires ghc
+%undefine	with_doc
+%endif
 Summary:	SELinux Common Intermediate Language (CIL) Compiler
 Summary(pl.UTF-8):	Kompilator języka pośredniego (CIL) SELinuksa
 Name:		secilc
 Version:	2.5
-Release:	1
+Release:	2
 License:	BSD
 Group:		Applications
 #Source0Download: https://github.com/SELinuxProject/selinux/wiki/Releases
