@@ -9,19 +9,19 @@
 Summary:	SELinux Common Intermediate Language (CIL) Compiler
 Summary(pl.UTF-8):	Kompilator języka pośredniego (CIL) SELinuksa
 Name:		secilc
-Version:	2.7
+Version:	2.8
 Release:	1
 License:	BSD
 Group:		Applications
 #Source0Download: https://github.com/SELinuxProject/selinux/wiki/Releases
-Source0:	https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20170804/%{name}-%{version}.tar.gz
-# Source0-md5:	301a4e477bc7214be16558f7c2dcbcff
+Source0:	https://raw.githubusercontent.com/wiki/SELinuxProject/selinux/files/releases/20180524/%{name}-%{version}.tar.gz
+# Source0-md5:	a3c363545842aadc6645a94112b476e7
 URL:		https://github.com/SELinuxProject/cil/wiki
 BuildRequires:	gcc >= 6:4.5.1
-BuildRequires:	libsepol-devel >= 2.7
+BuildRequires:	libsepol-devel >= 2.8
 %{?with_doc:BuildRequires:	pandoc}
 BuildRequires:	xmlto
-Requires:	libsepol >= 2.7
+Requires:	libsepol >= 2.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
