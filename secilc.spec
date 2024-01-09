@@ -5,19 +5,19 @@
 Summary:	SELinux Common Intermediate Language (CIL) Compiler
 Summary(pl.UTF-8):	Kompilator języka pośredniego (CIL) SELinuksa
 Name:		secilc
-Version:	3.1
+Version:	3.6
 Release:	1
 License:	BSD
 Group:		Applications
 #Source0Download: https://github.com/SELinuxProject/selinux/wiki/Releases
-Source0:	https://github.com/SELinuxProject/selinux/releases/download/20200710/%{name}-%{version}.tar.gz
-# Source0-md5:	f9743e405a8de331c249b723c09c6c3f
+Source0:	https://github.com/SELinuxProject/selinux/releases/download/%{version}/%{name}-%{version}.tar.gz
+# Source0-md5:	6df9570b8ee8d0bda251fdefd53be55e
 URL:		https://github.com/SELinuxProject/cil/wiki
 BuildRequires:	gcc >= 6:4.5.1
-BuildRequires:	libsepol-devel >= 3.1
+BuildRequires:	libsepol-devel >= 3.6
 %{?with_doc:BuildRequires:	pandoc}
 BuildRequires:	xmlto
-Requires:	libsepol >= 3.1
+Requires:	libsepol >= 3.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -54,8 +54,10 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING README %{?with_doc:docs/html}
+%doc LICENSE README %{?with_doc:docs/html}
 %attr(755,root,root) %{_bindir}/secil2conf
+%attr(755,root,root) %{_bindir}/secil2tree
 %attr(755,root,root) %{_bindir}/secilc
 %{_mandir}/man8/secil2conf.8*
+%{_mandir}/man8/secil2tree.8*
 %{_mandir}/man8/secilc.8*
