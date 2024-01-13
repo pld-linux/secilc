@@ -15,7 +15,7 @@ Source0:	https://github.com/SELinuxProject/selinux/releases/download/%{version}/
 URL:		https://github.com/SELinuxProject/cil/wiki
 BuildRequires:	gcc >= 6:4.5.1
 BuildRequires:	libsepol-devel >= 3.6
-%{?with_doc:BuildRequires:	pandoc}
+%{?with_doc:BuildRequires:	pandoc >= 2.0}
 BuildRequires:	xmlto
 Requires:	libsepol >= 3.6
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
