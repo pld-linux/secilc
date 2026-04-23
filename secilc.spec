@@ -2,17 +2,17 @@
 # Conditional build:
 %bcond_without	doc	# HTML documentation
 #
-%define	selinux_ver	3.8
+%define	selinux_ver	3.10
 Summary:	SELinux Common Intermediate Language (CIL) Compiler
 Summary(pl.UTF-8):	Kompilator języka pośredniego (CIL) SELinuksa
 Name:		secilc
-Version:	3.8.1
+Version:	3.10
 Release:	1
 License:	BSD
 Group:		Applications
 #Source0Download: https://github.com/SELinuxProject/selinux/wiki/Releases
 Source0:	https://github.com/SELinuxProject/selinux/releases/download/%{version}/%{name}-%{version}.tar.gz
-# Source0-md5:	b53be2733d1adba11d9192a12cbc63cc
+# Source0-md5:	9f806cfd4f68600af0f1a405adb5b5a1
 URL:		https://github.com/SELinuxProject/cil/wiki
 BuildRequires:	gcc >= 6:4.5.1
 BuildRequires:	libsepol-devel >= %{selinux_ver}
